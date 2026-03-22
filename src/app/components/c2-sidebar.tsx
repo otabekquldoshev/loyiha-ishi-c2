@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router";
+import logoImg from "../assets/logo.png"; // Yo'lni rasmingiz qayerda turganiga qarab to'g'irlang
 import { 
   LayoutDashboard, 
   Target, 
@@ -37,23 +38,32 @@ export function C2Sidebar() {
       }}
     >
       {/* Logo/Header */}
-      <div className="h-16 flex items-center justify-center border-b" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
+      {/* Logo/Header */}
+      <div className="h-20 flex items-center px-4 border-b" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
         {!collapsed ? (
-          <div className="flex items-center gap-2">
-            <div 
-              className="w-2 h-2 rounded-full animate-pulse"
-              style={{ backgroundColor: 'var(--c2-cyan)' }}
+          <div className="flex items-center gap-3">
+            {/* Logo Rasmi */}
+            <img 
+              src={logoImg} 
+              alt="Logo" 
+              className="w-10 h-10 object-contain rounded-lg border border-cyan-500/30 p-1"
+              style={{ filter: 'drop-shadow(0 0 5px rgba(0, 240, 255, 0.3))' }}
             />
-            <span className="text-lg font-semibold tracking-wider" style={{ color: 'var(--c2-cyan)' }}>
-              NEXUS_C2
-              OTABEK
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="text-[10px] text-gray-500 font-mono tracking-[0.2em]">TUIT_NEXUS</span>
+              <span className="text-sm font-bold tracking-tighter text-white">
+                ABROROV BAXTIYOR
+              </span>
+            </div>
           </div>
         ) : (
-          <div 
-            className="w-3 h-3 rounded-full animate-pulse"
-            style={{ backgroundColor: 'var(--c2-cyan)' }}
-          />
+          <div className="flex justify-center w-full">
+             <img 
+              src={logoImg} 
+              alt="Logo" 
+              className="w-8 h-8 object-contain animate-pulse"
+            />
+          </div>
         )}
       </div>
 
