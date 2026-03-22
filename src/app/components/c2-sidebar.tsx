@@ -45,7 +45,7 @@ export function C2Sidebar() {
               style={{ backgroundColor: 'var(--c2-cyan)' }}
             />
             <span className="text-lg font-semibold tracking-wider" style={{ color: 'var(--c2-cyan)' }}>
-              C2_NEXUS
+              NEXUS_C2: QULDOSHEV OTABEK
             </span>
           </div>
         ) : (
