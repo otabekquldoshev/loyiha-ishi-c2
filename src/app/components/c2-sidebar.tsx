@@ -37,7 +37,7 @@ export function C2Sidebar() {
         fontFamily: 'var(--font-ui)',
       }}
     >
-     {/* Logo/Header - Professional Yangilanish */}
+      {/* Logo/Header - Professional Yangilanish */}
       <div className="pt-10 pb-6 flex flex-col items-center justify-center border-b px-4 gap-4" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
         {!collapsed ? (
           <div className="flex flex-col items-center">
@@ -76,6 +76,44 @@ export function C2Sidebar() {
           </div>
         )}
       </div>
+      {/* Navigation */}
+      <nav className="p-3 flex flex-col gap-1">
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          const isActive = location.pathname === item.path;
+          
+          return (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="relative flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
+              style={{
+                backgroundColor: isActive ? 'rgba(0, 240, 255, 0.1)' : 'transparent',
+                color: isActive ? 'var(--c2-cyan)' : '#8b92a8',
+              }}
+            >
+              {isActive && (
+                <div 
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 rounded-r"
+                  style={{ backgroundColor: 'var(--c2-cyan)' }}
+                />
+              )}
+              <Icon 
+                className={`transition-all ${collapsed ? 'w-5 h-5' : 'w-5 h-5'}`}
+                style={{
+                  filter: isActive ? 'drop-shadow(0 0 6px var(--c2-cyan-glow))' : 'none',
+                }}
+              />
+              {!collapsed && (
+                <span className="text-sm font-medium group-hover:translate-x-0.5 transition-transform">
+                  {item.label}
+                </span>
+              )}
+            </Link>
+          );
+        })}
+      </nav>
+
       {/* Collapse Button */}
       <button
         onClick={() => setCollapsed(!collapsed)}
