@@ -53,10 +53,10 @@ export function C2Sidebar() {
             {/* Matnlar */}
             <div className="flex flex-col">
               <span className="text-[11px] text-cyan-500/70 font-mono tracking-[0.3em] uppercase">
-                TUIT Nexus
+                TUIT Nexus C2
               </span>
               <span className="text-lg font-black text-white tracking-tighter leading-none mt-1">
-                ABROROV <br/> BAXTIYOR
+                QULDOSHEV <br/> OTABEK
               </span>
             </div>
           </div>
