@@ -37,31 +37,36 @@ export function C2Sidebar() {
         fontFamily: 'var(--font-ui)',
       }}
     >
-     {/* Logo/Header */}
-      <div className="h-20 flex items-center px-4 border-b" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
+    {/* Logo/Header qismi */}
+      <div className="h-32 flex flex-col items-center justify-center border-b px-2 gap-3" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
         {!collapsed ? (
-          <div className="flex items-center gap-3">
-            <img 
-              src={logoImg} 
-              alt="C2 Logo" 
-              className="w-10 h-10 object-contain rounded-md"
-              style={{ filter: 'drop-shadow(0 0 8px var(--c2-cyan))' }}
-            />
+          <div className="flex flex-col items-center text-center">
+            {/* Logo doira ichida */}
+            <div className="mb-2 p-1 rounded-full border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+              <img 
+                src={logoImg} 
+                alt="TUIT Logo" 
+                className="w-16 h-16 object-contain rounded-full"
+              />
+            </div>
+            
+            {/* Matnlar */}
             <div className="flex flex-col">
-              <span className="text-[10px] text-gray-500 font-mono tracking-widest">TUIT_NEXUS</span>
-              <span className="text-sm font-bold text-white tracking-tighter">
-                ABROROV BAXTIYOR
+              <span className="text-[11px] text-cyan-500/70 font-mono tracking-[0.3em] uppercase">
+                TUIT Nexus
+              </span>
+              <span className="text-lg font-black text-white tracking-tighter leading-none mt-1">
+                ABROROV <br/> BAXTIYOR
               </span>
             </div>
           </div>
         ) : (
-          <div className="flex justify-center w-full">
-             <img 
-              src={logoImg} 
-              alt="Logo" 
-              className="w-8 h-8 object-contain animate-pulse"
-            />
-          </div>
+          /* Sidebar yopiq bo'lgandagi holat */
+          <img 
+            src={logoImg} 
+            alt="Logo" 
+            className="w-10 h-10 object-contain rounded-full animate-pulse shadow-[0_0_10px_rgba(0,240,255,0.4)]"
+          />
         )}
       </div>
 
