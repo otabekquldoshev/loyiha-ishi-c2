@@ -37,36 +37,43 @@ export function C2Sidebar() {
         fontFamily: 'var(--font-ui)',
       }}
     >
-    {/* Logo/Header qismi */}
-      <div className="h-32 flex flex-col items-center justify-center border-b px-2 gap-3" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
+    {/* Logo/Header - Professional Yangilanish */}
+      <div className="pt-10 pb-6 flex flex-col items-center justify-center border-b px-4 gap-4" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
         {!collapsed ? (
-          <div className="flex flex-col items-center text-center">
-            {/* Logo doira ichida */}
-            <div className="mb-2 p-1 rounded-full border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
-              <img 
-                src={logoImg} 
-                alt="TUIT Logo" 
-                className="w-16 h-16 object-contain rounded-full"
-              />
+          <div className="flex flex-col items-center">
+            {/* Yanada kattaroq va kuchli nurli Logo */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative bg-black p-1 rounded-full border border-cyan-500/50 shadow-[0_0_20px_rgba(0,240,255,0.3)]">
+                <img 
+                  src={logoImg} 
+                  alt="TUIT Logo" 
+                  className="w-24 h-24 object-contain rounded-full"
+                />
+              </div>
             </div>
             
-            {/* Matnlar */}
-            <div className="flex flex-col">
-              <span className="text-[11px] text-cyan-500/70 font-mono tracking-[0.3em] uppercase">
-                TUIT Nexus C2
+            {/* Matnlar qismini markazlashtirish va kattalashtirish */}
+            <div className="flex flex-col items-center mt-4 text-center">
+              <span className="text-[12px] text-cyan-400 font-mono tracking-[0.4em] uppercase opacity-80">
+                TUIT NEXUS C2
               </span>
-              <span className="text-lg font-black text-white tracking-tighter leading-none mt-1">
-                QULDOSHEV <br/> OTABEK
-              </span>
+              <div className="h-px w-12 bg-cyan-500/30 my-2"></div>
+              <h1 className="text-xl font-black text-white tracking-tighter leading-[1.1]">
+                QULDOSHEV <br/> 
+                <span className="text-cyan-500">OTABEK</span>
+              </h1>
             </div>
           </div>
         ) : (
           /* Sidebar yopiq bo'lgandagi holat */
-          <img 
-            src={logoImg} 
-            alt="Logo" 
-            className="w-10 h-10 object-contain rounded-full animate-pulse shadow-[0_0_10px_rgba(0,240,255,0.4)]"
-          />
+          <div className="py-4">
+            <img 
+              src={logoImg} 
+              alt="Logo" 
+              className="w-12 h-12 object-contain rounded-full animate-pulse shadow-[0_0_15px_rgba(0,240,255,0.5)]"
+            />
+          </div>
         )}
       </div>
 
