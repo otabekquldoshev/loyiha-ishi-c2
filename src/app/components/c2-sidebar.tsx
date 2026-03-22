@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import logoImg from "../assets/logo.png"; // Yo'lni rasmingiz qayerda turganiga qarab to'g'irlang
+import logoImg from "../../logo.png"; // Ikki marta orqaga (app va components papkasidan chiqish uchun)
 import { 
   LayoutDashboard, 
   Target, 
@@ -37,21 +37,19 @@ export function C2Sidebar() {
         fontFamily: 'var(--font-ui)',
       }}
     >
-      {/* Logo/Header */}
-      {/* Logo/Header */}
+     {/* Logo/Header */}
       <div className="h-20 flex items-center px-4 border-b" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
         {!collapsed ? (
           <div className="flex items-center gap-3">
-            {/* Logo Rasmi */}
             <img 
               src={logoImg} 
-              alt="Logo" 
-              className="w-10 h-10 object-contain rounded-lg border border-cyan-500/30 p-1"
-              style={{ filter: 'drop-shadow(0 0 5px rgba(0, 240, 255, 0.3))' }}
+              alt="C2 Logo" 
+              className="w-10 h-10 object-contain rounded-md"
+              style={{ filter: 'drop-shadow(0 0 8px var(--c2-cyan))' }}
             />
-            <div className="flex flex-col leading-none">
-              <span className="text-[10px] text-gray-500 font-mono tracking-[0.2em]">TUIT_NEXUS</span>
-              <span className="text-sm font-bold tracking-tighter text-white">
+            <div className="flex flex-col">
+              <span className="text-[10px] text-gray-500 font-mono tracking-widest">TUIT_NEXUS</span>
+              <span className="text-sm font-bold text-white tracking-tighter">
                 ABROROV BAXTIYOR
               </span>
             </div>
