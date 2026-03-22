@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router";
-import logoImg from "../../logo.png"; // Ikki marta orqaga (app va components papkasidan chiqish uchun)
 import { 
   LayoutDashboard, 
   Target, 
@@ -37,43 +36,23 @@ export function C2Sidebar() {
         fontFamily: 'var(--font-ui)',
       }}
     >
-    {/* Logo/Header - Professional Yangilanish */}
-      <div className="pt-10 pb-6 flex flex-col items-center justify-center border-b px-4 gap-4" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
+      {/* Logo/Header */}
+      <div className="h-16 flex items-center justify-center border-b" style={{ borderColor: 'rgba(0, 240, 255, 0.1)' }}>
         {!collapsed ? (
-          <div className="flex flex-col items-center">
-            {/* Yanada kattaroq va kuchli nurli Logo */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-              <div className="relative bg-black p-1 rounded-full border border-cyan-500/50 shadow-[0_0_20px_rgba(0,240,255,0.3)]">
-                <img 
-                  src={logoImg} 
-                  alt="TUIT Logo" 
-                  className="w-24 h-24 object-contain rounded-full"
-                />
-              </div>
-            </div>
-            
-            {/* Matnlar qismini markazlashtirish va kattalashtirish */}
-            <div className="flex flex-col items-center mt-4 text-center">
-              <span className="text-[12px] text-cyan-400 font-mono tracking-[0.4em] uppercase opacity-80">
-                TUIT NEXUS C2
-              </span>
-              <div className="h-px w-12 bg-cyan-500/30 my-2"></div>
-              <h1 className="text-xl font-black text-white tracking-tighter leading-[1.1]">
-                QULDOSHEV <br/> 
-                <span className="text-cyan-500">OTABEK</span>
-              </h1>
-            </div>
+          <div className="flex items-center gap-2">
+            <div 
+              className="w-2 h-2 rounded-full animate-pulse"
+              style={{ backgroundColor: 'var(--c2-cyan)' }}
+            />
+            <span className="text-lg font-semibold tracking-wider" style={{ color: 'var(--c2-cyan)' }}>
+              C2_NEXUS
+            </span>
           </div>
         ) : (
-          /* Sidebar yopiq bo'lgandagi holat */
-          <div className="py-4">
-            <img 
-              src={logoImg} 
-              alt="Logo" 
-              className="w-12 h-12 object-contain rounded-full animate-pulse shadow-[0_0_15px_rgba(0,240,255,0.5)]"
-            />
-          </div>
+          <div 
+            className="w-3 h-3 rounded-full animate-pulse"
+            style={{ backgroundColor: 'var(--c2-cyan)' }}
+          />
         )}
       </div>
 
