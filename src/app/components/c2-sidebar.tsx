@@ -56,7 +56,7 @@ export function C2Sidebar() {
             {/* Matnlar qismini markazlashtirish va kattalashtirish */}
             <div className="flex flex-col items-center mt-4 text-center">
               <span className="text-[12px] text-cyan-400 font-mono tracking-[0.4em] uppercase opacity-80">
-                TUIT NEXUS C2
+                TUIT COMMAND AND CONTROL (C2)
               </span>
               <div className="h-px w-12 bg-cyan-500/30 my-2"></div>
               <h1 className="text-xl font-black text-white tracking-tighter leading-[1.1]">
